@@ -1,0 +1,81 @@
+		\begin{tikzpicture}
+			\def \hbaromega{0.75cm}
+			\def \widthlevel{3cm}
+			
+			\node[] (origemaux) at (0,0) {};
+			
+			\node[] (origem) at (4,0) {};
+			
+			\node[] (E0) at ($(origem)+(0,0)$){$E_0$};
+			\node[] (laba) at ($(E0)+(0.5 + 0.5*\widthlevel,-0.75)$){\textbf{(a)}};
+			
+			\draw[line width=2pt] ($(E0) + (0.5 ,0.0)$) -- ($(E0) + (0.5 + \widthlevel,0.0)$) ;
+			
+			\node[] (E1) at ($(origem)+(0,\hbaromega)$){$E_1$};
+			
+			\draw[line width=1pt, color=gray] ($(E1) + (0.5 ,0.0)$) -- ($(E1) + (0.5 + \widthlevel,0.0)$) ;
+			
+			\node[] (E2) at ($(origem)+(0,2*\hbaromega)$){$E_1$};
+			\draw[line width=1pt, color=gray] ($(E2) + (0.5 ,0.0)$) -- ($(E2) + (0.5 + \widthlevel,0.0)$) ;
+			
+			
+			\node[] (Ed) at ($(origem)+(0,3*\hbaromega)$){$\vdots$};
+			\node[] (Edb) at ($(origem)+(0.5*\widthlevel+0.5,3*\hbaromega)$){$\vdots$};
+			
+						
+			\node[] (Enm1) at ($(origem)+(0,4*\hbaromega)$){$E_{n-1}$};
+			\draw[line width=1.2pt, color=cyan!50!black] ($(Enm1) + (0.5 ,0.0)$) -- ($(Enm1) + (0.5 + \widthlevel,0.0)$) ;
+			
+			\node[] (En) at ($(origem)+(0,5*\hbaromega)$){$E_{n}$};
+			\draw[line width=1.5pt, color=blue] ($(En) + (0.5 ,0.0)$) -- ($(En) + (0.5 + \widthlevel,0.0)$) ;
+			
+			\draw[<->,orange!50!gray, >=latex', shorten >=1pt, shorten <=1pt,thick, line width=2pt, opacity=0.95] 
+				($(E1)+(0.5 + \widthlevel + 0.175,-0.1)$) to node[auto, swap,  right, color=black, font=\large] {$\hbar \omega$}($(E2)+(0.5 + \widthlevel + 0.175,0.1)$);   
+			
+			
+			\node[] (Enp1) at ($(origem)+(0,6*\hbaromega)$){$E_{n+1}$};
+			\draw[line width=1pt, color=gray] ($(Enp1) + (0.5 ,0.0)$) -- ($(Enp1) + (0.5 + \widthlevel,0.0)$) ;
+			
+			\draw[<->,cyan!70!black, >=latex', shorten >=1pt, shorten <=1pt, bend right=-45, thick, line width=2pt, opacity=0.95] 
+				($(En.south)+(0.5 + \widthlevel,0.5)$) to node[auto, swap, sloped, right, color=black, font=\Huge] {}($(Enm1.south)+(0.5 + \widthlevel,0)$);   
+				
+			\node[] (aniquilacao) at ($(En)+(0.5+ 1.25*\widthlevel , -0.5*\hbaromega)$)[font=\huge]{$a$};
+			
+			\node[] (origemb) at ($(origem) + (6, 0)$) {};
+			
+			\node[] (E0b) at ($(origemb)+(0,0)$){$E_0$};
+			
+			\draw[line width=2pt] ($(E0b) + (0.5 ,0.0)$) -- ($(E0b) + (0.5 + \widthlevel,0.0)$) ;
+			\node[] (labb) at ($(E0b)+(0.5 + 0.5*\widthlevel,-0.75)$){\textbf{(b)}};
+			
+			\node[] (E1b) at ($(origemb)+(0,\hbaromega)$){$E_1$};
+			
+			\draw[line width=1pt, color=gray] ($(E1b) + (0.5 ,0.0)$) -- ($(E1b) + (0.5 + \widthlevel,0.0)$) ;
+			
+			\node[] (Edb) at ($(origemb)+(0,3*\hbaromega)$){$\vdots$};
+			\node[] (Edbc) at ($(origemb)+(0.5*\widthlevel+0.5,3*\hbaromega)$){$\vdots$};
+			
+			\node[] (E2b) at ($(origemb)+(0,2*\hbaromega)$){$E_1$};
+			\draw[line width=1pt, color=gray] ($(E2b) + (0.5 ,0.0)$) -- ($(E2b) + (0.5 + \widthlevel,0.0)$) ;
+			
+			\node[] (Enm1b) at ($(origemb)+(0,4*\hbaromega)$){$E_{n-1}$};
+			\draw[line width=1pt, color=gray] ($(Enm1b) + (0.5 ,0.0)$) -- ($(Enm1b) + (0.5 + \widthlevel,0.0)$) ;
+			
+			\node[] (Enb) at ($(origemb)+(0,5*\hbaromega)$){$E_{n}$};
+			\draw[line width=1.5pt, color=blue] ($(Enb) + (0.5 ,0.0)$) -- ($(Enb) + (0.5 + \widthlevel,0.0)$) ;
+			
+			\node[] (Enp1b) at ($(origemb)+(0,6*\hbaromega)$){$E_{n+1}$};
+			\draw[line width=1.2pt, color=cyan!50!black] ($(Enp1b) + (0.5 ,0.0)$) -- ($(Enp1b) + (0.5 + \widthlevel,0.0)$) ;
+
+			\draw[<->,cyan!70!black, >=latex', shorten >=1pt, shorten <=1pt, bend right=-45, thick, line width=2pt, opacity=0.95] 
+				($(Enp1b.south)+(0.5 + \widthlevel,0.5)$) to node[auto, swap, sloped, right, color=black, font=\Huge] {}($(Enb.south)+(0.5 + \widthlevel,0)$);   
+			
+			\draw[<->,orange!50!gray, >=latex', shorten >=1pt, shorten <=1pt,thick, line width=2pt, opacity=0.95] 
+				($(E1b)+(0.5 + \widthlevel + 0.175,-0.1)$) to node[auto, swap,  right, color=black, font=\large] {$\hbar \omega$}($(E2b)+(0.5 + \widthlevel + 0.175,0.1)$);   
+			
+			\node[] (criacao) at ($(Enp1b)+(0.5+ 1.3*\widthlevel , -0.5*\hbaromega)$)[font=\huge]{$a^\dagger$};
+			
+			
+			\node[] (endaux) at ($(origemb)+(0,-\hbaromega)$){};
+			
+		\end{tikzpicture}	
